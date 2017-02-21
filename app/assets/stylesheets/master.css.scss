@@ -1,2 +1,15 @@
 @import "bootstrap";
 
+.navbar {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 200;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background: image_url('stardust.png');
+}
+
+/* .navbar-light .navbar-brand, .navbar-light .navbar-toggler */
+.navbar a.navbar-brand {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 100;
+  color: #fff;
+}
