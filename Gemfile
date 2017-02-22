@@ -53,3 +53,5 @@ gem 'sprockets'
 gem 'sprockets-rails'
 # Rack
 gem 'rack'
+# Simple Form
+gem 'simple_form'
