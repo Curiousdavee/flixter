@@ -3,45 +3,55 @@
   <head>
     <title>Flixter</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <%= link_to 'Flixter', root_path, class: 'navbar-brand' %>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav navbar-text mr-auto">
-            <li class="nav-item"><%= link_to 'See all Courses', '#' %></li>
-          </ul>
-          <ul class="navbar-nav navbar-right">
-            <% if user_signed_in? %>
-              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'navbar-text'%>
-            <% else %>
-              <li class="nav-item">
-                <%= link_to 'Log In',new_user_session_path, class: 'btn btn-primary' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to 'Sign Up',new_user_registration_path, class: 'btn btn-success' %>
-              </li>
-            <% end %>
-          </ul>
-      </div>
-  </nav>
+    <div id="flex-content-container">
+        <!-- Navbar -->
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <%= link_to 'Flixter', root_path, class: 'navbar-brand' %>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-text mr-auto">
+              <li class="nav-item"><%= link_to 'See all Courses', '#' %></li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+              <% if user_signed_in? %>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'navbar-text'%>
+              <% else %>
+                <li class="nav-item">
+                  <%= link_to 'Log In',new_user_session_path, class: 'btn btn-primary' %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Sign Up',new_user_registration_path, class: 'btn btn-success' %>
+                </li>
+              <% end %>
+            </ul>
+        </div>
+      </nav>
 
-  <!-- Flash messages for Device gem-->
-  <% if notice.present? %>
-    <p class="alert alert-info"><%= notice %></p>
-  <% end %>
-  <% if alert.present? %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
+      <!-- Flash messages for Device gem-->
+      <% if notice.present? %>
+        <p class="alert alert-info"><%= notice %></p>
+      <% end %>
+      <% if alert.present? %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
 
-  <%= yield %>
+      <%= yield %>
+    </div>
+
+  <div id="footer">
+    <div class="container">
+      <b>Footer Here</b>
+      <br />
+      <%= link_to 'Link', '#' %>
+    </div>
+  </div>
+
+
   </body>
 </html>
