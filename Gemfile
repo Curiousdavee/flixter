@@ -55,3 +55,5 @@ gem 'sprockets-rails'
 gem 'rack'
 # Simple Form
 gem 'simple_form'
+# Device gem
+gem 'devise'
