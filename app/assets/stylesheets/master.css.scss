@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+body {
+  background: image_url('bg.png');
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
@@ -47,6 +52,12 @@ h1, h2, h3, h4, h5, h6, .navbar {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+}
+
+.feature {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 
